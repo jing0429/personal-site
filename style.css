@@ -181,7 +181,21 @@ section .img-container{
     background-color: black;
     transition: background-color 1s ease ;
 }
-
+@media screen and (max-width: 1078px) {
+    section .container{
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr ;
+        
+    }
+    section .container  .content h1{
+        font-size: 3rem;
+    }
+    section .container  .content p{
+        font-size: 1rem;
+    }
+    
+}
 @media screen and (max-width: 768px) {
     
     body {
@@ -200,18 +214,4 @@ section .img-container{
         width: 100px;
     }
 }
-@media screen and (max-width: 1078px) {
-    section .container{
-        padding: 0;
-        display: grid;
-        grid-template-columns: 1fr ;
-        
-    }
-    section .container  .content h1{
-        font-size: 3rem;
-    }
-    section .container  .content p{
-        font-size: 1rem;
-    }
-    
-}
+

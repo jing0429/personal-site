@@ -7,9 +7,12 @@
 
 body{
     height: 100vh;
-    overflow-x:hidden;
+    
     font-family: 'Noto Sans TC', sans-serif;
     background-color: black;
+}
+.body{
+    overflow-x:hidden;
 }
 body::-webkit-scrollbar{
     background-color: white;
@@ -181,25 +184,6 @@ section .img-container{
     background-color: black;
     transition: background-color 1s ease ;
 }
-
-@media screen and (max-width: 768px) {
-    
-    body {
-        overflow-x: hidden!important;
-    }
-    
-}
-@media screen and (max-width: 360px){
-    header h1.title{
-        font-size: 2.5rem;
-        top: 5%;
-    }
-    header .sun{
-        right: 0;
-        top: 50px;
-        width: 100px;
-    }
-}
 @media screen and (max-width: 1078px) {
     section .container{
         padding: 0;
@@ -214,4 +198,23 @@ section .img-container{
         font-size: 1rem;
     }
     
+}
+
+@media screen and (max-width: 768px) {
+    
+    .body {
+        overflow-x: hidden!important;
+    }
+    
+}
+@media screen and (max-width: 360px){
+    header h1.title{
+        font-size: 2.5rem;
+        top: 5%;
+    }
+    header .sun{
+        right: 0;
+        top: 50px;
+        width: 100px;
+    }
 }

@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: black;
+}
+.body{
+    width: 100%;
+    overflow-x:hidden;
+}
+body::-webkit-scrollbar{
+    background-color: white;
+    background-clip: content-box;
+    overflow:hidden;
+}
+body::-webkit-scrollbar-thumb{
+    background:#375a74;
+    border: 3px solid rgba(0,0,0,0.4);
+    border-radius: 100px;
+}
+header .img-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #375a74;
+    
+}
+header img{
+    position: absolute;
+    
+}
+header h1.title{
+    z-index: 12;
+    position: absolute;
+    top:20%;
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    color: snow;
+    text-shadow: black -.03em .05em;
+}
+.mountain1{
+    width: 2000px;
+    z-index: 20;
+    bottom: -300px;
+}
+.mountain2{
+    width: 1600px;
+    z-index: 15;
+    bottom: -100px;
+    left: 0px;
+}
+.mountain3{
+    width: 1200px;
+    z-index: 10;
+    right: 0;
+    bottom: -100px;
+}
+.sky{
+    z-index: 2;
+    width: 2500px;
+    
+}
+.sun{
+    opacity: 0.6;
+    z-index: 9;
+    width: 200px;
+    top: 15%;
+    right: -50px;
+}
+.shadow{
+    position: absolute;
+    background:linear-gradient(to bottom ,transparent,black);
+    width: 100%;
+    height: 302px;
+    bottom: -302px;
+    z-index: 70;
+}
+
+
+section{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+.line{
+    width: 100vw;
+    background-color: black;
+}
+.line1{
+    margin-top: 300px;
+}
+.line svg{
+    width: 100%;
+    stroke-width: 15px;
+    stroke-linejoin: arcs;
+}
+.line.line1 svg{
+    stroke-dasharray: 2110px;
+    stroke-dashoffset: -2110px;
+}
+.line.line2 svg{
+    stroke-dasharray: 2787px;
+    stroke-dashoffset: 2787px;
+}
+.line svg path{
+    transition: 1s stroke-dashoffset ease;
+}
+section .container{
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+section .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly ;
+
+    padding: 1rem;
+    transition: opacity 1.5s ease-in;
+    opacity: 0;
+}
+section .content h1.title{
+    position: relative;
+    font-size: 2.5rem;
+    text-align: center;
+    word-spacing: 1.5rem;
+}
+section .content h1.title::after{
+    content: "";
+    border-bottom: dashed 2px #fff;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    height:3px;
+    width: 0%;
+    transition: width 1.75s ease-in;
+}
+section .content.active{
+    opacity: 1;
+}
+section .content.active h1.title::after{
+    width: 50%;
+}
+section .content p{
+    line-height: 3em;
+    text-align: center;
+    font-size: 1.5rem;
+}
+section .img-container{
+    
+    
+    overflow: hidden;
+    border-radius: 5%;
+    border: 3px solid gray;
+}
+.content-img{
+    width: 100%;
+    transform: scale(1);
+    transition: transform 5s linear;
+}
+.footer{
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.footer a img{
+    display: block;
+}
+.footer a:hover img{
+    
+    background-color: black;
+    transition: background-color 1s ease ;
+}
+@media screen and (max-width: 1078px) {
+    section .container{
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr ;
+        
+    }
+    section .container  .content h1{
+        font-size: 3rem;
+    }
+    section .container  .content p{
+        font-size: 1rem;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    
+    .body {
+        overflow-x: hidden!important;
+    }
+    
+}
+@media screen and (max-width: 360px){
+    header h1.title{
+        font-size: 2.5rem;
+        top: 5%;
+    }
+    header .sun{
+        right: 0;
+        top: 50px;
+        width: 100px;
+    }
+}
